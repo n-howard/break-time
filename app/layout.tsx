@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { TASA_Explorer } from "next/font/google";
 
 import "./globals.css";
 
-
+const tasaExplorer = TASA_Explorer({
+  variable: "--font-tasa-explorer",
+  subsets: ["latin"],
+  weight: '400',
+});
 
 export const metadata: Metadata = {
   title: "Break Time",
@@ -17,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${tasaExplorer.variable} antialiased`}
       >
         {children}
       </body>
