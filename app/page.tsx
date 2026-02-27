@@ -4,8 +4,14 @@ import { useState, useEffect, useRef } from 'react'
 
 
 function Focus({focusTime}) {
+  let hours = ("0"+Math.floor(focusTime/60/60)).slice(-2);
+  let mins = ("0"+(Math.floor(focusTime/60)%60)).slice(-2);
+  let sec = ("0"+focusTime%60).slice(-2)
   return (
-    <div></div>
+    <div>
+      <div className="text-(--focus) text-[100px] font-sans flex text-center justify-center align-center font-black">{hours}:{mins}:{sec}</div>
+      <button></button>
+    </div>
   )
 }
 

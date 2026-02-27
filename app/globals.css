@@ -2,22 +2,27 @@
 
 :root {
   --foreground: #ffffff;
-  --background: #0f0f11;
+  --background: #000000;
+  --focus: #89ff80;
+  ---break: #77c4ff;
+  --pause: #ffef77;
+  --stop: #e67f25;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--tasa-explorer);
-  --focus: lime-500;
-  --break: sky-400;
-  --pause: yellow-300;
-  --stop: orange-500;
+  --color-focus: var(--focus)
+  --color-break: var(--break)
+  --color-pause: var(--pause)
+  --color-stop: var(--stop)
+  
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f0f11;
     --foreground: #ededed;
   }
 } */
