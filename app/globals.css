@@ -3,16 +3,16 @@
 :root {
   --foreground: #ffffff;
   --background: #000000;
-  --focus: #89ff80;
-  ---break: #77c4ff;
-  --pause: #ffef77;
-  --stop: #e67f25;
+  --focus: oklch(76.8% 0.233 130.85);
+  ---break: oklch(71.5% 0.143 215.221);
+  --pause: oklch(79.5% 0.184 86.047);
+  --stop: oklch(70.5% 0.213 47.604);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--tasa-explorer);
+  --font-sans: var(--font-tasa-explorer);
   --color-focus: var(--focus)
   --color-break: var(--break)
   --color-pause: var(--pause)

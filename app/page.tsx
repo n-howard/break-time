@@ -8,9 +8,9 @@ function Focus({focusTime}) {
   let mins = ("0"+(Math.floor(focusTime/60)%60)).slice(-2);
   let sec = ("0"+focusTime%60).slice(-2)
   return (
-    <div>
-      <div className="text-(--focus) text-[100px] font-sans flex text-center justify-center align-center font-black">{hours}:{mins}:{sec}</div>
-      <button></button>
+    <div className="flex items-center content-center flex-col">
+      <div className="text-lime-500 text-[100px] font-sans flex text-center">{hours}:{mins}:{sec}</div>
+      <button className="bg-gradient-to-r from-lime-500 via-lime-600 to-lime-800 text-[40px] font-sans text-(--background) flex text-center rounded-3xl items-center hover:bg-gradient-to-br px-5 py-1.5 focus:bg-lime-500 focus:bg-none">Focus</button>
     </div>
   )
 }
@@ -47,7 +47,7 @@ export default function Home() {
   )
   return (
     <main>
-      <div className="bg-color-background">
+      <div className="bg-color-background h-1 flex place-content-center">
         <Focus 
         focusTime={focusTime}/>
         <Break

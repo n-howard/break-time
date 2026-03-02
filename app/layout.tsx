@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TASA_Explorer } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import "./globals.css";
 
@@ -8,6 +9,12 @@ const tasaExplorer = TASA_Explorer({
   subsets: ["latin"],
   weight: '400',
 });
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: '400',
+})
 
 export const metadata: Metadata = {
   title: "Break Time",
@@ -22,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tasaExplorer.variable} antialiased`}
+        className={`${tasaExplorer.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>
