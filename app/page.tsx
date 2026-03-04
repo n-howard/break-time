@@ -8,8 +8,8 @@ function Focus({focus, focusTime, setFocusTime, setFocus, setBreakTime, interval
   let minsF = ((Math.floor(focusTime/60)%60)).toString().padStart(2, "0");
   let secF = Math.floor((focusTime%60)).toString().padStart(2, "0");
   return (
-    <div className="flex items-center content-center flex-col place-content-center align-middle pb-[15vh] gap-y-[15vh]">
-      <div className={`${focus ? 'text-lime-500' : 'text-neutral-500'} text-[150px] font-sans flex text-center`}>{hoursF}:{minsF}:{secF}</div>
+    <div className="flex items-center content-center flex-col place-content-center align-middle pb-[15vh] gap-y-[15vh] pt-[10vh]">
+      <div className={`${focus ? 'text-lime-500' : 'text-olive-500'} text-[150px] font-sans flex text-center`}>{hoursF}:{minsF}:{secF}</div>
       <div className="flex flex-row gap-x-[3vw]">
         <button className="bg-gradient-to-r from-lime-500 via-lime-600 to-lime-800 text-[40px] font-sans text-(--background) flex text-center rounded-3xl items-center hover:bg-gradient-to-br px-5 py-1.5 focus:bg-lime-500 focus:bg-none" 
           onClick={()=>handleFocus(focus, focusTime, setFocusTime, setFocus, setBreakTime, intervalTime, setTakeBreak, takeBreak, intervalBreak, breakTime)}>Focus</button>
@@ -46,7 +46,7 @@ function Break({focus, focusTime, setFocusTime, setFocus, setBreakTime, interval
   
   return (
     <div className="flex items-center content-center flex-col place-content-center align-middle">
-      <div className={`${takeBreak ? `${notNeg ? 'text-sky-500' : 'text-orange-600'}` : 'text-neutral-500'}  text-[150px] font-sans flex text-center`}>{`${notNeg ? '' : '-'}${hours}:${mins}:${sec}`}</div>
+      <div className={`${takeBreak ? `${notNeg ? 'text-sky-500' : 'text-orange-600'}` : 'text-mist-500'}  text-[150px] font-sans flex text-center`}>{`${notNeg ? '' : '-'}${hours}:${mins}:${sec}`}</div>
       
 
     </div>
