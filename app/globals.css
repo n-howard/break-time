@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --foreground: #ffffff;
-  --background: #000000;
+  --foreground: var(--color-mist-900)
+  --background: var(--color-mist-900)
   --focus: var(--color-lime-500);
   ---break: var(--color-blue-500);
   --pause: var(--color-yellow-500);
