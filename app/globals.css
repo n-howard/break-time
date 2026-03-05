@@ -3,10 +3,10 @@
 :root {
   --foreground: #ffffff;
   --background: #000000;
-  --focus: oklch(76.8% 0.233 130.85);
-  ---break: oklch(71.5% 0.143 215.221);
-  --pause: oklch(79.5% 0.184 86.047);
-  --stop: oklch(70.5% 0.213 47.604);
+  --focus: var(--color-lime-500);
+  ---break: var(--color-blue-500);
+  --pause: var(--color-yellow-500);
+  --stop: var(--color-orange-500);
 }
 
 @theme inline {
