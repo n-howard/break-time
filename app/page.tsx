@@ -13,7 +13,7 @@ function Focus({focus, focusTime, setFocusTime, setFocus, setBreakTime, interval
   let focusColor = 'lime'
   return (
     <div className="flex items-center content-center flex-col place-content-center align-middle pb-[15vh] gap-y-[15vh] pt-[10vh]">
-      <div className={`${focus ? `text-${focusColor}-500` : 'text-olive-500/75'} ${focus ? 'text-[150px]' : 'text-[100px]'} font-sans flex text-center`}>{hoursF}:{minsF}:{secF}</div>
+      <div className={`${focus ? `text-lime-500` : 'text-olive-500/75'} ${focus ? 'text-[150px]' : 'text-[100px]'} font-sans flex text-center`}>{hoursF}:{minsF}:{secF}</div>
       <div className="flex flex-row gap-x-[3vw]">
         <button className="bg-gradient-to-r from-lime-500 via-green-500 to-lime-800 text-[40px] font-sans text-(--background) flex text-center rounded-3xl items-center hover:bg-gradient-to-br px-5 py-1.5 focus:shadow-lg focus:shadow-lime-500/27" 
           onClick={()=>handleFocus(focus, focusTime, setFocusTime, setFocus, setBreakTime, intervalTime, setTakeBreak, takeBreak, intervalBreak, breakTime)}>Focus</button>
