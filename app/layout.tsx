@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   description: "A Study Timer That Lets You Take a Break",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

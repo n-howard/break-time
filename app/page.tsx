@@ -1,6 +1,8 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect, useRef, ChangeEvent, KeyboardEvent } from 'react'
+import { SessionProvider } from "next-auth/react"
+import { useSession } from "next-auth/react"
 
 
 
@@ -253,40 +255,42 @@ export default function Home() {
 
 
   return (
-    <main className="">
-      <div className="bg-gradient-to-br from-mist-800 via-mist-900 to-mist-950 h-dvh w-dvw flex flex-row">
-        <div className="w-[35vw]">
-        <Tasks
-        breakTime={breakTime}
-        setBreakTime={setBreakTime}/>
-        </div>
-        <div className="flex-col w-[65vw]">
-        <Focus 
-        focus={focus}
-        focusTime={focusTime}
-        setFocusTime={setFocusTime}
-        setFocus={setFocus}
-        setBreakTime={setBreakTime}
-        intervalTime={intervalTime}
-        setTakeBreak={setTakeBreak}
-        takeBreak={takeBreak}
-        intervalBreak={intervalBreak}
-        breakTime={breakTime}/>
-        <Break
-        focus={focus}
-        focusTime={focusTime}
-        setFocusTime={setFocusTime}
-        setFocus={setFocus}
-        setBreakTime={setBreakTime}
-        intervalTime={intervalTime}
-        setTakeBreak={setTakeBreak}
-        takeBreak={takeBreak}
-        intervalBreak={intervalBreak}
-        breakTime={breakTime}/>
+
+      <main className="">
+        <div className="bg-gradient-to-br from-mist-800 via-mist-900 to-mist-950 h-dvh w-dvw flex flex-row">
+          <div className="w-[35vw]">
+          <Tasks
+          breakTime={breakTime}
+          setBreakTime={setBreakTime}/>
+          </div>
+          <div className="flex-col w-[65vw]">
+          <Focus 
+          focus={focus}
+          focusTime={focusTime}
+          setFocusTime={setFocusTime}
+          setFocus={setFocus}
+          setBreakTime={setBreakTime}
+          intervalTime={intervalTime}
+          setTakeBreak={setTakeBreak}
+          takeBreak={takeBreak}
+          intervalBreak={intervalBreak}
+          breakTime={breakTime}/>
+          <Break
+          focus={focus}
+          focusTime={focusTime}
+          setFocusTime={setFocusTime}
+          setFocus={setFocus}
+          setBreakTime={setBreakTime}
+          intervalTime={intervalTime}
+          setTakeBreak={setTakeBreak}
+          takeBreak={takeBreak}
+          intervalBreak={intervalBreak}
+          breakTime={breakTime}/>
+          
+          </div> 
         
-      </div> 
-      
-      </div>
-    </main>
+        </div>
+      </main>
+
   );
 }
